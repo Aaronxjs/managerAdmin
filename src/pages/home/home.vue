@@ -74,24 +74,24 @@ Form 组件提供了表单验证的功能，只需要通过 rule 属性传入约
       onSubmit() {
         //提交
 //this.$refs.infoForm.validate，这是表单验证
-        this.$refs.infoForm.validate((valid) => {
-          if(valid) {
-            this.$post('m/add/about/us',this.infoForm).then(res => {
-              if(res.errCode == 200) {
-                this.$message({
-                  message: res.errMsg,
-                  type: 'success'
-                });
-                this.$router.push('/aboutus/aboutlist');
-              } else {
-                this.$message({
-                  message: res.errMsg,
-                  type:'error'
-                });
-              }
-            });
-          }
-        });
+        // this.$refs.infoForm.validate((valid) => {
+        //   if(valid) {
+        //     this.$post('m/add/about/us',this.infoForm).then(res => {
+        //       if(res.errCode == 200) {
+        //         this.$message({
+        //           message: res.errMsg,
+        //           type: 'success'
+        //         });
+        //         this.$router.push('/aboutus/aboutlist');
+        //       } else {
+        //         this.$message({
+        //           message: res.errMsg,
+        //           type:'error'
+        //         });
+        //       }
+        //     });
+        //   }
+        // });
       }
     },
     components: {
@@ -103,7 +103,7 @@ Form 组件提供了表单验证的功能，只需要通过 rule 属性传入约
 <style lang="scss" scoped>
   .edit_container{
     line-height: normal;
-    .ql-blank{
+    /deep/ .ql-container .ql-editor{
       height: 200px;
     }
   }

@@ -43,6 +43,23 @@ export const otherRouter = {
 // 作为Main组件的子页面展示并且在左侧菜单显示的路由写在appRouter里
 export const appRouter = [
   {
+    path: '/infor',
+    name: 'infor',
+    title: '基本信息',
+    meta: {
+      requireAuth: true
+    },
+    component: Layout,
+    children: [
+      {
+        path: '/infor',
+        name: 'inforIndex',
+        title: '基本信息',
+        component: () => import('../pages/infor/infor')
+      }
+    ]
+  },
+  {
     path: '/tables',
     name: 'tables',
     title: '表格管理',

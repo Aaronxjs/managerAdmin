@@ -85,6 +85,11 @@
             icon: 'el-icon-adm-home'
           },
           {
+            path: '/infor',
+            title: '基本信息',
+            icon: 'el-icon-adm-information'
+          },
+          {
             path: '/tables',
             title: '表格管理',
             icon: 'el-icon-adm-linechart',
