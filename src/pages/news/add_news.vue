@@ -6,12 +6,18 @@
       -->
       <el-col :span="24" class="warp-main">
         <el-form ref="infoForm" :model="infoForm" :rules="rules" label-width="120px">
+          <el-form-item>
+            <el-col align="center">编辑新闻</el-col>
+          </el-form-item>
           <el-form-item label="标题" prop="a_title">
             <el-input v-model="infoForm.a_title"></el-input>
           </el-form-item>
 
-          <el-form-item label="来源" prop="a_source">
-            <el-input v-model="infoForm.a_source"></el-input>
+          <el-form-item label="分类" prop="a_source">
+              <el-cascader
+                v-model="value"
+                :options="options"
+                @change="handleChange"></el-cascader>
           </el-form-item>
           <!--使用编辑器
           -->
@@ -25,7 +31,7 @@
             </div>
           </el-form-item>
 
-          <el-form-item>
+          <el-form-item align="center">
             <el-button type="primary" @click="onSubmit">确认提交</el-button>
           </el-form-item>
         </el-form>
@@ -41,6 +47,10 @@
   import 'quill/dist/quill.bubble.css'
   import { quillEditor } from 'vue-quill-editor' //调用编辑器
   export default {
+    components: {
+      //使用编辑器
+      quillEditor
+    },
     data() {
       return {
         infoForm: {
@@ -58,6 +68,36 @@
             {required: true, message: '请输入详细内容', trigger: 'blur'}
           ]
         },
+        options: [
+          {
+            value: '1',
+            label: '公司动态',
+            children: [
+             {
+              value: '2',
+              label: '公司动态'
+             },
+             {
+              value: '3',
+              label: '公司动态'
+             }
+            ]
+          },
+          {
+            value: '4',
+            label: '行业动态',
+            children: [
+             {
+              value: '5',
+              label: '行业动态'
+             },
+             {
+              value: '6',
+              label: '行业动态'
+             }
+            ]
+          }
+        ]
       }
     },
     computed: {
@@ -72,32 +112,10 @@
       onEditorReady(editor) {
       },
       onSubmit() {
-        //提交
-        //this.$refs.infoForm.validate，这是表单验证
-        // this.$refs.infoForm.validate((valid) => {
-        //   if(valid) {
-        //     this.$post('m/add/about/us',this.infoForm).then(res => {
-        //       if(res.errCode == 200) {
-        //         this.$message({
-        //           message: res.errMsg,
-        //           type: 'success'
-        //         });
-        //         this.$router.push('/aboutus/aboutlist');
-        //       } else {
-        //         this.$message({
-        //           message: res.errMsg,
-        //           type:'error'
-        //         });
-        //       }
-        //     });
-        //   }
-        // });
+
       }
     },
-    components: {
-      //使用编辑器
-      quillEditor
-    }
+
   }
 </script>
 <style lang="scss" scoped>

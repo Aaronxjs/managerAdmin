@@ -4,7 +4,7 @@
           <el-form>
             <el-row type="flex" justify="center">
                 <el-col :span=12 class="title">
-                    公司简介
+                    关于我们
                 </el-col>
             </el-row>
             <el-row type="flex" justify="center">

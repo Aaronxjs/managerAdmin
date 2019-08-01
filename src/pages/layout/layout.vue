@@ -86,62 +86,72 @@
           },
           {
             path: '/infor',
-            title: '基本信息',
+            title: '关于我们',
             icon: 'el-icon-adm-information'
           },
           {
-            path: '/tables',
-            title: '表格管理',
-            icon: 'el-icon-adm-linechart',
+            path: '/news',
+            title: '新闻中心',
+            icon: 'el-icon-news',
             children: [
-              {path: '/tables/basic', title: '基本表格'},
-              {path: '/tables/sort', title: '排序表格'},
-              {path: '/tables/filter', title: '筛选表格'}
+              {path: '/news/manager_sorts', title: '分类管理'},
+              {path: '/news/manager_news', title: '内容管理'},
+              {path: '/news/add_news', title: '添加内容'}
             ]
           },
-          {
-            path: '/charts',
-            title: '图表管理',
-            icon: 'el-icon-adm-statistics',
-            children: [
-              {path: '/charts/bar', title: '柱状图'},
-              {path: '/charts/line', title: '折线图'},
-              {path: '/charts/pie', title: '饼图'}
-            ]
-          },
-          {
-            path: '/form',
-            title: '表单管理',
-            icon: 'el-icon-adm-form',
-            children: [
-              {path: '/form/render', title: '渲染表单'}
-            ]
-          },
-          {
-            path: '/system/index',
-            title: '系统管理',
-            icon: 'el-icon-adm-project'
-          },
-          {
-            path: '/user/index',
-            title: '用户管理',
-            icon: 'el-icon-adm-user'
-          },
-          {
-            path: '/access/index',
-            title: '权限管理',
-            icon: 'el-icon-adm-organization'
-          },
-          {
-            path: '/log/index',
-            title: '操作日志',
-            icon: 'el-icon-adm-log'
-          },
-          {
-            path: '/test/index',
-            title: '测试',
-            icon: 'el-icon-adm-formsetup'
-          }
+          // {
+          //   path: '/tables',
+          //   title: '表格管理',
+          //   icon: 'el-icon-adm-linechart',
+          //   children: [
+          //     {path: '/tables/basic', title: '基本表格'},
+          //     {path: '/tables/sort', title: '排序表格'},
+          //     {path: '/tables/filter', title: '筛选表格'}
+          //   ]
+          // },
+          // {
+          //   path: '/charts',
+          //   title: '图表管理',
+          //   icon: 'el-icon-adm-statistics',
+          //   children: [
+          //     {path: '/charts/bar', title: '柱状图'},
+          //     {path: '/charts/line', title: '折线图'},
+          //     {path: '/charts/pie', title: '饼图'}
+          //   ]
+          // },
+          // {
+          //   path: '/form',
+          //   title: '表单管理',
+          //   icon: 'el-icon-adm-form',
+          //   children: [
+          //     {path: '/form/render', title: '渲染表单'}
+          //   ]
+          // },
+          // {
+          //   path: '/system/index',
+          //   title: '系统管理',
+          //   icon: 'el-icon-adm-project'
+          // },
+          // {
+          //   path: '/user/index',
+          //   title: '用户管理',
+          //   icon: 'el-icon-adm-user'
+          // },
+          // {
+          //   path: '/access/index',
+          //   title: '权限管理',
+          //   icon: 'el-icon-adm-organization'
+          // },
+          // {
+          //   path: '/log/index',
+          //   title: '操作日志',
+          //   icon: 'el-icon-adm-log'
+          // },
+          // {
+          //   path: '/test/index',
+          //   title: '测试',
+          //   icon: 'el-icon-adm-formsetup'
+          // }
         ],
         isCollapsed: false,
         adminMenuShow: false

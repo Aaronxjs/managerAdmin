@@ -45,7 +45,7 @@ export const appRouter = [
   {
     path: '/infor',
     name: 'infor',
-    title: '基本信息',
+    title: '关于我们',
     meta: {
       requireAuth: true
     },
@@ -54,171 +54,200 @@ export const appRouter = [
       {
         path: '/infor',
         name: 'inforIndex',
-        title: '基本信息',
+        title: '关于我们',
         component: () => import('../pages/infor/infor')
       }
     ]
   },
   {
-    path: '/tables',
-    name: 'tables',
-    title: '表格管理',
+    path: '/news',
+    name: 'news',
+    title: '新闻中心',
     meta: {
       requireAuth: true
     },
     component: Layout,
     children: [
       {
-        path: 'basic',
-        name: 'basic',
-        title: '基本表格',
-        component: () => import('../pages/tables/basic')
+        path: 'add_news',
+        name: 'add_news',
+        title: '内容添加',
+        component: () => import('../pages/news/add_news')
       },
       {
-        path: 'sort',
-        name: 'sort',
-        title: '排序表格',
-        component: () => import('../pages/tables/sort')
+        path: 'manager_sorts',
+        name: 'manager_sorts',
+        title: '分类管理',
+        component: () => import('../pages/news/manager_sorts')
       },
       {
-        path: 'filter',
-        name: 'filter',
-        title: '筛选表格',
-        component: () => import('../pages/tables/filter')
+        path: 'manager_news',
+        name: 'manager_news',
+        title: '内容管理',
+        component: () => import('../pages/news/manager_news')
       }
     ]
   },
-  {
-    path: '/charts',
-    name: 'charts',
-    title: 'echarts图表',
-    meta: {
-      requireAuth: true
-    },
-    component: Layout,
-    children: [
-      {
-        path: 'bar',
-        name: 'bar',
-        title: '柱状图',
-        component: () => import('../pages/charts/bar')
-      },
-      {
-        path: 'line',
-        name: 'line',
-        title: '折线图',
-        component: () => import('../pages/charts/line')
-      },
-      {
-        path: 'pie',
-        name: 'pie',
-        title: '饼图',
-        component: () => import('../pages/charts/pie')
-      }
-    ]
-  },
-  {
-    path: '/form',
-    name: 'form',
-    title: '表单管理',
-    meta: {
-      requireAuth: true
-    },
-    component: Layout,
-    children: [
-      {
-        path: 'render',
-        name: 'render',
-        title: '渲染表单',
-        component: () => import('../pages/form/render/render')
-      }
-    ]
-  },
-  {
-    path: '/system',
-    name: 'system',
-    title: '系统管理',
-    meta: {
-      requireAuth: true
-    },
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'system_index',
-        title: '系统管理',
-        component: () => import('../pages/system/index/index')
-      }
-    ]
-  },
-  {
-    path: '/user',
-    name: 'user',
-    title: '用户管理',
-    meta: {
-      requireAuth: true
-    },
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'user_index',
-        title: '用户管理',
-        component: () => import('../pages/user/index')
-      }
-    ]
-  },
-  {
-    path: '/access',
-    name: 'access',
-    title: '权限管理',
-    meta: {
-      requireAuth: true
-    },
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'access_index',
-        title: '权限管理',
-        component: () => import('../pages/access/index')
-      }
-    ]
-  },
-  {
-    path: '/log',
-    name: 'log',
-    title: '日志管理',
-    meta: {
-      requireAuth: true
-    },
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'log_index',
-        title: '操作日志',
-        component: () => import('../pages/log/index')
-      }
-    ]
-  },
-  {
-    path: '/test',
-    name: 'test',
-    title: '测试',
-    meta: {
-      requireAuth: true
-    },
-    component: Layout,
-    children: [
-      {
-        path: 'index',
-        name: 'test_index',
-        title: '测试',
-        component: () => import('../pages/test/test')
-      }
-    ]
-  }
+  // {
+  //   path: '/tables',
+  //   name: 'tables',
+  //   title: '表格管理',
+  //   meta: {
+  //     requireAuth: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'basic',
+  //       name: 'basic',
+  //       title: '基本表格',
+  //       component: () => import('../pages/tables/basic')
+  //     },
+  //     {
+  //       path: 'sort',
+  //       name: 'sort',
+  //       title: '排序表格',
+  //       component: () => import('../pages/tables/sort')
+  //     },
+  //     {
+  //       path: 'filter',
+  //       name: 'filter',
+  //       title: '筛选表格',
+  //       component: () => import('../pages/tables/filter')
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/charts',
+  //   name: 'charts',
+  //   title: 'echarts图表',
+  //   meta: {
+  //     requireAuth: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'bar',
+  //       name: 'bar',
+  //       title: '柱状图',
+  //       component: () => import('../pages/charts/bar')
+  //     },
+  //     {
+  //       path: 'line',
+  //       name: 'line',
+  //       title: '折线图',
+  //       component: () => import('../pages/charts/line')
+  //     },
+  //     {
+  //       path: 'pie',
+  //       name: 'pie',
+  //       title: '饼图',
+  //       component: () => import('../pages/charts/pie')
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/form',
+  //   name: 'form',
+  //   title: '表单管理',
+  //   meta: {
+  //     requireAuth: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'render',
+  //       name: 'render',
+  //       title: '渲染表单',
+  //       component: () => import('../pages/form/render/render')
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/system',
+  //   name: 'system',
+  //   title: '系统管理',
+  //   meta: {
+  //     requireAuth: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'system_index',
+  //       title: '系统管理',
+  //       component: () => import('../pages/system/index/index')
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/user',
+  //   name: 'user',
+  //   title: '用户管理',
+  //   meta: {
+  //     requireAuth: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'user_index',
+  //       title: '用户管理',
+  //       component: () => import('../pages/user/index')
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/access',
+  //   name: 'access',
+  //   title: '权限管理',
+  //   meta: {
+  //     requireAuth: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'access_index',
+  //       title: '权限管理',
+  //       component: () => import('../pages/access/index')
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/log',
+  //   name: 'log',
+  //   title: '日志管理',
+  //   meta: {
+  //     requireAuth: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'log_index',
+  //       title: '操作日志',
+  //       component: () => import('../pages/log/index')
+  //     }
+  //   ]
+  // },
+  // {
+  //   path: '/test',
+  //   name: 'test',
+  //   title: '测试',
+  //   meta: {
+  //     requireAuth: true
+  //   },
+  //   component: Layout,
+  //   children: [
+  //     {
+  //       path: 'index',
+  //       name: 'test_index',
+  //       title: '测试',
+  //       component: () => import('../pages/test/test')
+  //     }
+  //   ]
+  // }
 ];
 
 export const routers = [
